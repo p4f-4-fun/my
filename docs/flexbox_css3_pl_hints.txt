@@ -18,7 +18,7 @@
       * 	@param: 
       *		    $ 0 - domyślna wartość
       *		    & 1-n (n w zależności od ilości elementów, 
-      *                        do poukładania w danej kolejności)
+      *                    do poukładania w danej kolejności)
       * 	@brief: 
       *		    & Możliwość zmiany kolejności wyświetlania elementów,
       *               NIEZALEŻNIE od kolejności zadeklarowania ich w HTML
