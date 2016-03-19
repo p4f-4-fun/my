@@ -120,7 +120,7 @@
       *		    & center        - Linie są pakowane w kierunku środka kontenera
       * 	@brief: 
       *		    & Właściwość określa pozycje wyświetlania elementy w KONTENERZE
-      * 	    & Nie korzystać z właściwości wraz z align-items, align-self
+      * 	    & Nie korzystać z właściwości wraz z align-items oraz align-self
       *             & Właściwość nadawana K O N T E N E R O W I
       *		
       * ---- UWAGA ---- 
