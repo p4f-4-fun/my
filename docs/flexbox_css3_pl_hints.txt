@@ -1,136 +1,136 @@
-/**
-  * Flexbox CSS3 - podstawowe hinty użycia (opisane przez P4Fun)
-  * ------------------------------------------------------------
-  *  1. display: @param;
-  * 	@param: 
-  *			& flex
-  *			 lub (zależność -> silnik przeglądarki)
-  *			& -webkit-flex /* Safari, Chrome oraz Android Browser 4.2-4.3 */
-  *			& -ms-flex     /* IE >= 10, jednak i tak nie zawsze działa */
-  * 	@brief: 
-  *			& Właściwość nadawana K O N T E N E R O W I
-  *			& Właściwosć WYMAGANA, by w ogóle korzystać z Flexboxa
-  *			[!] IE < 10 NIE WSPIERA Flexa
-  * 
-  *	2. order: @param;
-  *    -moz-order: @param;    /* Firefox */
-  *    -webkit-order: @param; /* Safari, Chrome */  
-  * 	@param: 
-  *			$ 0 - domyślna wartość
-  *			& 1-n (n w zależności od ilości elementów, 
-  *                do poukładania w danej kolejności)
-  * 	@brief: 
-  *			& Możliwość zmiany kolejności wyświetlania elementów,
-  *           NIEZALEŻNIE od kolejności zadeklarowania ich w HTML
-  *			& Właściwość nadawana K O N K R E T N E M U elementowi
-  *			& Właściwosć działa wyłącznie z Flexem
-  *         [!] IE oraz Android Browser w wersji <= 4.3 NIE WSPIERA właściwości order
-  *
-  *	3. justify-content: @param;
-  *		-ms-justify-content: @param;	 /* IE >= 10, jednak i tak nie zawsze działa */
-  *		-moz-justify-content: @param;    /* Firefox */
-  *     -webkit-justify-content: @param; /* Safari, Chrome oraz Android Browser 4.2-4.3 */
-  * 	@param: 
-  *			$ flex-start    - domyślna wartość
-  *			& space-between - pozycja elementu w przestrzeni między liniami
-  *			& space-around  - pozycja elementu w przestrzeni przed, między i za liniami
-  *			& flex-start    - pozycja na początku kontenera
-  *         & flex-end	    - pozycja na końcu kontenera
-  *			& center	    - pozycja wyśrodkowana względem kontenera
-  *		@brief: 
-  *			& Rozmieszczenie elementów wewnątrz kontenera,
-  *		      w płaszczyźnie poziomej/ horyzontalnej [horizontal]
-  *			& Właściwość nadawana K O N T E N E R O W I
-  *
-  *	4. align-items: @param; 
-  *	   -ms-align-items: @param;     /* IE >= 10, jednak i tak nie zawsze działa */
-  *	   -moz-align-items: @param;    /* Firefox */
-  *	   -webkit-align-items: @param; /* Safari, Chrome oraz Android Browser 4.2-4.3 */
-  * 	@param: 
-  *			$ stretch    - domyślna wartość
-  *		    & flex-start - pozycja na początku kontenera
-  *		    & flex-end   - pozycja na końcu kontenera
-  *		    & baseline   - pozycja względem linii bazowej kontenera
-  *			& stretch    - rozciąniecie elementu na wysokość kontenera
-  *		    & center     - pozycja wyśrodkowana względem kontenera
-  * 	@brief: 
-  *			& Rozmieszczenie elementów wewnątrz kontenera,
-  *           w płaszczyźnie pionowej [vertical]
-  *			& Właściwość nadawana K O N T E N E R O W I
-  * 
-  *	5. align-self: @param; 
-  *	   -ms-align-self: @param;     /* IE >= 10, jednak i tak nie zawsze działa */
-  *	   -moz-align-self: @param;    /* Firefox */
-  *	   -webkit-align-self: @param; /* Safari, Chrome, Android Browser 4.2-4.3 */
-  * 	@param: 
-  *			$ auto       - domyślna wartość
-  *		    & flex-start - pozycja na początku kontenera
-  *		    & flex-end   - pozycja na końcu kontenera
-  *		    & baseline   - pozycja względem linii bazowej kontenera
-  *			& stretch    - rozciąniecie elementu na wysokość kontenera
-  *		    & center     - pozycja wyśrodkowana względem kontenera
-  * 	@brief: 
-  *			& Rozmieszczenie elementów wewnątrz kontenera,
-  *           w płaszczyźnie pionowej [vertical]
-  *			& Właściwość nadawana K O N K R E T N E M U elementowi
-  * 
-  *	6. flex-wrap: @param;
-  *	   -ms-flex-wrap: @param;     /* IE >= 10, jednak i tak nie zawsze działa */
-  *	   -moz-flex-wrap: @param;    /* Firefox */
-  *	   -webkit-flex-wrap: @param; /* Safari, Chrome, Android Browser 4.2-4.3 */
-  * 	@param: 
-  *			$ nowrap       - domyślna wartość
-  *		    & wrap-reverse - zawijanie, ale w odwróconej kolejności 
-  *		    & nowrap       - brak zawijania elementów
-  *		    & wrap         - zawijanie elementów
-  * 	@brief: 
-  *			& Właściwość definiuje formę zawijania elementów,
-  *           jeżeli nie zmieszczą się obok siebie
-  *			& Właściwość nadawana K O N T E N E R O W I
-  *         [!] W przypadku braku zdefiniowania formy zawijania się elementów,
-  *             w sytuacji, gdy elementy nie są w stanie pomieścić się w KONTENERZE, 
-  *             nastąpi ich zaciśnianie się, dostosowując się do szerokości KONTERNERA.
-  *
-  *	7. flex-direction: @param;
-  *	   -ms-flex-direction: @param;     /* IE >= 10, jednak i tak nie zawsze działa */
-  *	   -moz-flex-direction: @param;    /* Firefox */
-  *	   -webkit-flex-direction: @param; /* Safari, Chrome, Android Browser 4.2-4.3 */
-  * 	@param: 
-  *			$ row            - domyślna wartość
-  *			& column-reverse - elementy wyświetlane w kolumnie [vertical], w odwrócenej kolejności  
-  *			& row-reverse    - elementy wyświetlane w wierszu [hortizontal], w odwrócenej kolejności  
-  *			& column		 - elementy wyświetlane w kolumnie [vertical]
-  *			& row			 - elementy wyświetlane w wierszu [horizontal]
-  * 	@brief: 
-  *			& Właściwość określa kierunek wyświetlanie elementów w KONTENERZE
-  *         & Właściwość nadawana K O N T E N E R O W I
-  *
-  *	8. align-content: @param;
-  *	   -ms-align-content: @param;     /* IE >= 10, jednak i tak nie zawsze działa */
-  *	   -moz-align-content: @param;    /* Firefox */
-  *	   -webkit-align-content: @param; /* Safari, Chrome, Android Browser 4.2-4.3 */
-  * 	@param: 
-  * 		$ stretch       - domyślna wartość
-  *		    & space-between - Linie są równomiernie rozłożone w kontenerze
-  *			& space-around  - Linie są równomiernie rozłożone w kontenerze
-  *                           z połową wolnej przestrzeni po obu końcach
-  *		    & flex-start    - Linie są pakowane w kierunku początku kontenera
-  *		    & flex-end      - Linie są pakowane w kierunku końca kontenera
-  *			& stretch       - Linie są rozciągane, by zająć pozostało przestrzeń kontenera
-  *		    & center        - Linie są pakowane w kierunku środka kontenera
-  * 	@brief: 
-  *			& Właściwość określa pozycje wyświetlania elementy w KONTENERZE
-  * 		& Nie korzystać z właściwości wraz z align-items, align-self oraz justify-content
-  *         & Właściwość nadawana K O N T E N E R O W I
-  *		
-  * ---- UWAGA ---- 
-  *	& Korzystając z Flexa NIE MOŻEMY KORZYSTAĆ z działania właściwości:
-  *   -> float
-  *   -> clear
-  *   -> vertical-align
-  *
-  * ---- ŹRÓDŁA ----
-  * & Dokumentacja w3      -> w3Schools.com
-  * & Określenie supportu  -> CanIUse.com
-  *
-**/
+    /**
+      * Flexbox CSS3 - podstawowe hinty użycia (opisane przez P4Fun)
+      * ------------------------------------------------------------
+      *  1. display: @param;
+      * 	@param: 
+      *			& flex
+      *			 lub (zależność -> silnik przeglądarki)
+      *			& -webkit-flex /* Safari, Chrome oraz Android Browser 4.2-4.3 */
+      *			& -ms-flex     /* IE >= 10, jednak i tak nie zawsze działa */
+      * 	@brief: 
+      *			& Właściwość nadawana K O N T E N E R O W I
+      *			& Właściwosć WYMAGANA, by w ogóle korzystać z Flexboxa
+      *			[!] IE < 10 NIE WSPIERA Flexa
+      * 
+      *	2. order: @param;
+      *    -moz-order: @param;    /* Firefox */
+      *    -webkit-order: @param; /* Safari, Chrome */  
+      * 	@param: 
+      *			$ 0 - domyślna wartość
+      *			& 1-n (n w zależności od ilości elementów, 
+      *                do poukładania w danej kolejności)
+      * 	@brief: 
+      *			& Możliwość zmiany kolejności wyświetlania elementów,
+      *           NIEZALEŻNIE od kolejności zadeklarowania ich w HTML
+      *			& Właściwość nadawana K O N K R E T N E M U elementowi
+      *			& Właściwosć działa wyłącznie z Flexem
+      *         [!] IE oraz Android Browser w wersji <= 4.3 NIE WSPIERA właściwości order
+      *
+      *	3. justify-content: @param;
+      *		-ms-justify-content: @param;	 /* IE >= 10, jednak i tak nie zawsze działa */
+      *		-moz-justify-content: @param;    /* Firefox */
+      *     -webkit-justify-content: @param; /* Safari, Chrome oraz Android Browser 4.2-4.3 */
+      * 	@param: 
+      *			$ flex-start    - domyślna wartość
+      *			& space-between - pozycja elementu w przestrzeni między liniami
+      *			& space-around  - pozycja elementu w przestrzeni przed, między i za liniami
+      *			& flex-start    - pozycja na początku kontenera
+      *         & flex-end	    - pozycja na końcu kontenera
+      *			& center	    - pozycja wyśrodkowana względem kontenera
+      *		@brief: 
+      *			& Rozmieszczenie elementów wewnątrz kontenera,
+      *		      w płaszczyźnie poziomej/ horyzontalnej [horizontal]
+      *			& Właściwość nadawana K O N T E N E R O W I
+      *
+      *	4. align-items: @param; 
+      *	   -ms-align-items: @param;     /* IE >= 10, jednak i tak nie zawsze działa */
+      *	   -moz-align-items: @param;    /* Firefox */
+      *	   -webkit-align-items: @param; /* Safari, Chrome oraz Android Browser 4.2-4.3 */
+      * 	@param: 
+      *			$ stretch    - domyślna wartość
+      *		    & flex-start - pozycja na początku kontenera
+      *		    & flex-end   - pozycja na końcu kontenera
+      *		    & baseline   - pozycja względem linii bazowej kontenera
+      *			& stretch    - rozciąniecie elementu na wysokość kontenera
+      *		    & center     - pozycja wyśrodkowana względem kontenera
+      * 	@brief: 
+      *			& Rozmieszczenie elementów wewnątrz kontenera,
+      *           w płaszczyźnie pionowej [vertical]
+      *			& Właściwość nadawana K O N T E N E R O W I
+      * 
+      *	5. align-self: @param; 
+      *	   -ms-align-self: @param;     /* IE >= 10, jednak i tak nie zawsze działa */
+      *	   -moz-align-self: @param;    /* Firefox */
+      *	   -webkit-align-self: @param; /* Safari, Chrome, Android Browser 4.2-4.3 */
+      * 	@param: 
+      *			$ auto       - domyślna wartość
+      *		    & flex-start - pozycja na początku kontenera
+      *		    & flex-end   - pozycja na końcu kontenera
+      *		    & baseline   - pozycja względem linii bazowej kontenera
+      *			& stretch    - rozciąniecie elementu na wysokość kontenera
+      *		    & center     - pozycja wyśrodkowana względem kontenera
+      * 	@brief: 
+      *			& Rozmieszczenie elementów wewnątrz kontenera,
+      *           w płaszczyźnie pionowej [vertical]
+      *			& Właściwość nadawana K O N K R E T N E M U elementowi
+      * 
+      *	6. flex-wrap: @param;
+      *	   -ms-flex-wrap: @param;     /* IE >= 10, jednak i tak nie zawsze działa */
+      *	   -moz-flex-wrap: @param;    /* Firefox */
+      *	   -webkit-flex-wrap: @param; /* Safari, Chrome, Android Browser 4.2-4.3 */
+      * 	@param: 
+      *			$ nowrap       - domyślna wartość
+      *		    & wrap-reverse - zawijanie, ale w odwróconej kolejności 
+      *		    & nowrap       - brak zawijania elementów
+      *		    & wrap         - zawijanie elementów
+      * 	@brief: 
+      *			& Właściwość definiuje formę zawijania elementów,
+      *           jeżeli nie zmieszczą się obok siebie
+      *			& Właściwość nadawana K O N T E N E R O W I
+      *         [!] W przypadku braku zdefiniowania formy zawijania się elementów,
+      *             w sytuacji, gdy elementy nie są w stanie pomieścić się w KONTENERZE, 
+      *             nastąpi ich zaciśnianie się, dostosowując się do szerokości KONTERNERA.
+      *
+      *	7. flex-direction: @param;
+      *	   -ms-flex-direction: @param;     /* IE >= 10, jednak i tak nie zawsze działa */
+      *	   -moz-flex-direction: @param;    /* Firefox */
+      *	   -webkit-flex-direction: @param; /* Safari, Chrome, Android Browser 4.2-4.3 */
+      * 	@param: 
+      *			$ row            - domyślna wartość
+      *			& column-reverse - elementy wyświetlane w kolumnie [vertical], w odwrócenej kolejności  
+      *			& row-reverse    - elementy wyświetlane w wierszu [hortizontal], w odwrócenej kolejności  
+      *			& column		 - elementy wyświetlane w kolumnie [vertical]
+      *			& row			 - elementy wyświetlane w wierszu [horizontal]
+      * 	@brief: 
+      *			& Właściwość określa kierunek wyświetlanie elementów w KONTENERZE
+      *         & Właściwość nadawana K O N T E N E R O W I
+      *
+      *	8. align-content: @param;
+      *	   -ms-align-content: @param;     /* IE >= 10, jednak i tak nie zawsze działa */
+      *	   -moz-align-content: @param;    /* Firefox */
+      *	   -webkit-align-content: @param; /* Safari, Chrome, Android Browser 4.2-4.3 */
+      * 	@param: 
+      * 		$ stretch       - domyślna wartość
+      *		    & space-between - Linie są równomiernie rozłożone w kontenerze
+      *			& space-around  - Linie są równomiernie rozłożone w kontenerze
+      *                           z połową wolnej przestrzeni po obu końcach
+      *		    & flex-start    - Linie są pakowane w kierunku początku kontenera
+      *		    & flex-end      - Linie są pakowane w kierunku końca kontenera
+      *			& stretch       - Linie są rozciągane, by zająć pozostało przestrzeń kontenera
+      *		    & center        - Linie są pakowane w kierunku środka kontenera
+      * 	@brief: 
+      *			& Właściwość określa pozycje wyświetlania elementy w KONTENERZE
+      * 		& Nie korzystać z właściwości wraz z align-items, align-self oraz justify-content
+      *         & Właściwość nadawana K O N T E N E R O W I
+      *		
+      * ---- UWAGA ---- 
+      *	& Korzystając z Flexa NIE MOŻEMY KORZYSTAĆ z działania właściwości:
+      *   -> float
+      *   -> clear
+      *   -> vertical-align
+      *
+      * ---- ŹRÓDŁA ----
+      * & Dokumentacja w3      -> w3Schools.com
+      * & Określenie supportu  -> CanIUse.com
+      *
+    **/
