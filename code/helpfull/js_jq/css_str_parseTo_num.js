@@ -5,7 +5,7 @@
 */
 
 function cssStrToNum( param ) {
- 	var unitLen = 2, // px, em itd.. if you need work with rem itd.. increase this value
+ 	var unitLen = 2, // unit["px"].length; ex. 1 -> %, 2-> px, em, 3-> rem
  	    parserTemp = param.substr( 0, (param.length - unitLen) );
 	return !param.match(/\./g) ? parseInt( parserTemp ) : parseFloat( parserTemp );
 }
