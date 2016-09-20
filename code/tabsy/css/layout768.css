@@ -1,0 +1,162 @@
+/* CSS */
+
+* { padding: 0; margin: 0; }
+
+*::selection { background-color: orange; color: white; }
+*::-moz-selection { background-color: orange; color: white; }
+
+a { text-decoration: none; }
+
+body {
+    background-color: darkblue;
+    font-family: monospace;
+	font-size: 12px;
+    color: yellow;
+}
+
+.wrapper { width: 100%; }
+
+.fixedHeader {
+    background-color: maroon;
+    border-bottom: 2px dotted black;
+    font-family: 'Indie Flower', cursive;
+    text-shadow: 2px 2px black;
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
+	box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-size: 24px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.container { width: 100%; }
+
+.content {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+/* .sideLBox { ... } */
+
+.sideRBox {
+    background-color: maroon;
+    border-bottom: 2px dotted black;
+	margin-right: auto;
+	margin-left: auto;
+	min-height: 250px;
+    padding: 0px 30px 42px 30px;
+    width: calc(100% - 60px);
+}
+
+.titleBox {
+    margin-bottom: 15px;    
+    text-shadow: 2px 2px black;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    width: 100%;
+    float: left;
+    color: yellow;
+}
+
+.URCornerBtns {
+    margin-bottom: 15px;
+    text-shadow: 2px 2px black;
+    margin-top: 10px;
+    font-size: 16px;
+	position: absolute;
+	right: 30px;
+}
+
+.sideRBox_inner { border: 2px dotted black; height: 220px; }
+
+.sideRBox_top {
+    background-color: #300000 !important;
+    -webkit-box-shadow: 0px 15px 25px -10px rgba(0,0,0,0.6) !important;
+    -moz-box-shadow: 0px 15px 25px -10px rgba(0,0,0,0.6) !important;
+    box-shadow: 0px 15px 25px -10px rgba(0,0,0,0.6) !important;
+	padding: 10px 0px 10px 20px;
+    height: 54px;
+}
+
+
+.sideRBox_mid {
+    padding-left: 20px;
+    margin-top: 15px;
+	-ms-overflow-y: auto;
+    overflow-y: auto;
+    height: 130px;
+}
+
+.inputBox {
+    background-color: #400000;
+    border-bottom: 1px dotted black;
+    border-right: 1px dotted black;
+	border-left: 1px dotted black;
+}
+
+.inputBoxField {
+    padding-bottom: 5px;
+	padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+	outline: none;
+    border: none;
+    height: 20px;
+    margin: 0;
+    color: inherit;
+    width: calc(100% - 40px);
+}
+.social {
+    text-align: center;
+	height: 240px;
+    width: 100%;
+}
+
+.socialdivs {
+	background-color: #000025 !important;
+    margin-right: auto;
+    margin-left: auto;
+	height: 240px;
+    width: 100%;
+}
+
+.social-fb:hover { background-color: #3b5998; cursor: pointer; }
+.social-yt:hover { background-color: #bb0000; cursor: pointer; }
+.social-tw:hover { background-color: #00aced; cursor: pointer; }
+.social-gplus:hover { background-color: #dd4b39; cursor: pointer; }
+
+.socialdivs a { 
+	display: block; 
+	height: 60px;
+	width: 100%;
+	color: transparent;
+}
+
+.socialTile {
+	-webkit-transition: 0.1s; 
+	-moz-transition: 0.1s; 
+	-o-transition: 0.1s; 
+	transition: 0.1s; 
+    font-size: 42px;
+    height: 60px;
+    width: 100%; 
+}
+
+.prefooter { display: none; }
+
+.footer {
+    background-color: darkred;
+    font-family: 'Indie Flower', cursive;
+    text-shadow: 2px 2px black;
+    padding-top: 15px;
+    border-top: 1px dotted black;
+    text-align: center;
+    min-height: 30px;
+	font-size: 14px;
+    width: 100%;
+}
+
+

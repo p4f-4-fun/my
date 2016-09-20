@@ -1,0 +1,79 @@
+/* CSS */
+
+.button {
+    background-color: maroon;
+    border-bottom: 2px dotted black;
+    border-right: 2px dotted black;
+    font-family: 'Inconsolata';
+    text-shadow: 2px 2px black;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0px;
+    width: calc(100% - 2px);
+}
+
+.button:hover {
+    background-color: darkred;
+    border-bottom: none;
+    border-right: none;
+    text-shadow: 1px 2px black;
+    border-left: 2px dotted black;
+    border-top: 2px dotted black;
+	cursor: pointer;
+}
+
+.sticky {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+}
+
+.bgScheme {
+    background-color: #400000;
+    -webkit-box-shadow: inset 80px 0px 15px -70px rgba(0,0,0,0.4);
+    -moz-box-shadow: inset 80px 0px 15px -70px rgba(0,0,0,0.4);
+    box-shadow: inset 80px 0px 15px -70px rgba(0,0,0,0.4);
+}
+
+.help {
+	background-color: maroon;
+    border-bottom: 2px dotted black;
+    border-right: 2px dotted black;
+    font-family: 'Inconsolata';
+    text-shadow: 2px 2px black;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-size: 14px;
+	position: fixed;
+    padding: 10px;
+    z-index: 105;
+    width: 110px;
+}
+
+.rotate { 
+	-webkit-transition: 0.8s;
+	-moz-transition: 0.8s;
+	-o-transition: 0.8s;
+	transition: 0.8s;
+}
+
+.rotate:hover { 
+	-webkit-transform: rotate(360deg); 
+	-moz-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);	
+	-o-transform: rotate(360deg); 
+	transform: rotate(360deg); 
+}
+
+.aLTimeCol { color: #00ff00; }
+.aLVarCol { color: blue; }
+.aLTATextCol { color: white; }
+.aLElemCol { color: orange; }
+.aLdidFuncCol { color: lightgray; }
+
+.clearfix { clear: both; }
+
+

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pl" dir="ltr">
+    
+	<head>
+		
+        <title>Array JS Methods Learning</title>
+
+        <!-- meta -->
+		<meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- css -->
+        <link rel="stylesheet" media="screen and (min-width: 991px)" href="css/layout.css"    type="text/css" />
+        <link rel="stylesheet" media="screen and (max-width: 990px)" href="css/layout900.css" type="text/css" />
+        <link rel="stylesheet" media="screen and (max-width: 772px)" href="css/layout768.css" type="text/css" />
+        <link rel="stylesheet" media="screen and (max-width: 480px)" href="css/layout480.css" type="text/css" />
+        <link rel="stylesheet" media="screen and (max-width: 360px)" href="css/layout360.css" type="text/css" />
+        
+		<link rel="stylesheet" media="screen and (min-width: 991px)" href="css/other.css"    type="text/css" />
+		<link rel="stylesheet" media="screen and (max-width: 990px)" href="css/other900.css" type="text/css" />
+		<link rel="stylesheet" media="screen and (max-width: 772px)" href="css/other768.css" type="text/css" />
+		
+        <!-- favicon -->
+        <link rel="icon" href="gfx/fav.ico" type="image/x-icon" />
+        
+        <!-- gfonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower"  type="text/css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata&subset=latin,latin-ext"  type="text/css" />
+       
+        <!-- fontello -->
+        <link rel="stylesheet" href="css/fontello.css" type="text/css" />
+        
+        <!-- js -->
+        <script src="js/tabs.js" type="text/javascript"></script>
+        
+	</head>
+    
+<body>
+    
+    <div class="wrapper">
+       
+        <div class="fixedHeader">Let's learn how to use built-in JS Array methods</div>
+        
+        <div class="container">
+            
+            <div class="content">
+                
+                <div class="sideLBox">   
+                    <div class="button" id="srt">sort()</div>
+                    <div class="button" id="pop">pop()</div>
+                    <div class="button" id="sft">shift()</div>
+                    <div class="button" id="psh">push()</div>
+                    <div class="button" id="uft">unshift()</div>
+                    <div class="button" id="rev">reverse()</div>
+                </div>
+                
+                <div class="sideRBox">
+                    
+                    <div class="titleBox">Terminal</div>
+                    
+                    <div class="URCornerBtns">
+                        <i class="icon-retweet rotate" style="display: inline-block;"></i>
+                        <i class="icon-cancel rotate" style="display: inline-block;"></i>
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                    
+                    <div class="sideRBox_inner bgScheme">
+                        
+                        <div class="sideRBox_top bgScheme">
+                            <span style="color: #ff0000;">HH:MM:SS#</span>
+                                <span class="aLVarCol">var</span>
+                                <span class="aLTATextCol">TArray = [<span class="aLElemCol">'Lorem'</span>, 
+                                    <span class="aLElemCol">'Ipsum'</span>, 
+                                    <span class="aLElemCol">'Dolor'</span>, 
+                                    <span class="aLElemCol">'Sit'</span>, 
+                                    <span class="aLElemCol">'Amet'</span>, 
+                                    <span class="aLElemCol">'Consectetur'</span>, 
+                                    <span class="aLElemCol">'Adipiscing'</span>, 
+                                    <span class="aLElemCol">'Elit'</span>, 
+                                    <span class="aLElemCol">'Etiam'</span>, 
+                                    <span class="aLElemCol">'Consequat'</span>]; 
+                                </span>
+                                <span class="aLdidFuncCol">// PRIMARY_VER array; MAX_ONLY 10 elements will processed!</span><br /><br />  
+                        </div>
+                        
+                        <noscript>
+                            <br />
+                            <h4>&nbsp;&nbsp;&nbsp;<font color="red">--:--:--#</font> <font color="lightgray">Your browser does not support JavaScript! Fix it!</h4></font>
+                        </noscript>
+                        
+                        <div class="sideRBox_mid bgScheme" id="midConsole"></div>
+                        
+                    </div>
+                    
+                    <div class="inputBox">
+                        <input type="text" placeholder="Type here arguments needed to push(), unshift() methods before pressing buttons!" id="in1" class="inputBoxField bgScheme" />
+                    </div>
+                    
+                </div>
+                
+                <div class="clearfix"></div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="social">
+            
+            <div class="socialdivs">
+                <div class="social-fb socialTile">
+                    <a href="https://www.facebook.com/" target="_blank" />
+                        <i class="icon-facebook"></i></a>
+                </div>
+            
+                <div class="social-yt socialTile">
+                    <a href="https://www.youtube.com/" target="_blank" />
+                        <i class="icon-youtube"></i></a>
+                </div>
+        
+                <div class="social-tw socialTile">
+                    <a href="https://twitter.com/" target="_blank" />
+                        <i class="icon-twitter"></i></a>
+                </div>
+    
+                <div class="social-gplus socialTile">
+                    <a href="https://plus.google.com/" target="_blank" />
+                        <i class="icon-gplus"></i></a>
+                </div>
+                
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+        
+        <div class="prefooter"></div>
+
+        <div class="footer">
+            <div class="footer_inner">
+                FreeToUse -> Hav' fun n' keep it up! -> Learn as much as possible! <span style="color: white;">#2016</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="js/jquery-1.12.0.js" type="text/javascript"></script>
+    <script src="js/sticky.js" type="text/javascript"></script>
+    <script src="js/jqmech.js" type="text/javascript"></script>
+        
+</body>
+</html>

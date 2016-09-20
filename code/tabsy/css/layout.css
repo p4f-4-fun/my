@@ -1,0 +1,198 @@
+/* CSS */
+
+* { padding: 0; margin: 0; }
+
+*::selection { background-color: orange; color: white; }
+*::-moz-selection { background-color: orange; color: white; }
+ 
+a { text-decoration: none; }
+
+body {
+    background-color: darkblue;
+    font-family: monospace;
+	font-size: 12px;
+    color: yellow;
+}
+
+body::-webkit-scrollbar-track { background-color: #400000; }
+body::-webkit-scrollbar { width: 3px; }
+body::-webkit-scrollbar-thumb { background-color: #00ff00; }
+
+.wrapper { width: 100%; }
+
+.fixedHeader {
+    background-color: maroon;
+    border-bottom: 1px dotted black;
+    font-family: 'Indie Flower', cursive;
+    text-shadow: 2px 2px black;
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
+	box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-size: 36px;
+    padding: 11px 0px;
+	height: 60px;
+    width: 100%;
+}
+
+.container {
+    margin-bottom: 300px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.content {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    width: 1000px;
+}
+
+.sideLBox { margin-top: 50px; float: left; }
+
+.sideRBox {
+    -webkit-border-bottom-right-radius: 40px;
+    -moz-border-bottom-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: maroon;
+    border-bottom: 2px dotted black;
+    border-right: 3px dotted black;
+    margin-left: 234px;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.7);
+    margin-top: 50px;
+    min-height: 289px;
+    position: absolute;
+    padding: 0px 30px 42px 30px;
+    width: 703px;
+    float: left;
+}
+
+.titleBox {
+    margin-bottom: 15px;    
+    text-shadow: 2px 2px black;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+    float: left;
+	width: 93%;
+    color: yellow;
+}
+
+.URCornerBtns {
+    margin-bottom: 15px;
+    text-shadow: 2px 2px black;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 14px;
+    float: left;
+}
+
+.sideRBox_inner { border: 1px dotted black; height: 220px; }
+
+.sideRBox_top {
+    background-color: #300000 !important;
+	font-family: monospace;
+    -webkit-box-shadow: 0px 15px 25px -10px rgba(0,0,0,0.6) !important;
+    -moz-box-shadow: 0px 15px 25px -10px rgba(0,0,0,0.6) !important;
+    box-shadow: 0px 15px 25px -10px rgba(0,0,0,0.6) !important;
+    padding: 10px 0px 10px 20px;
+    height: 34px;
+}
+
+
+.sideRBox_mid {
+    padding-left: 20px;
+	font-family: monospace;
+    margin-top: 15px;
+	-ms-overflow-y: auto;
+    overflow-y: auto;
+    height: 150px;
+}
+
+.sideRBox_mid::-webkit-scrollbar-track { background-color: #300000; }
+.sideRBox_mid::-webkit-scrollbar { width: 5px; }
+.sideRBox_mid::-webkit-scrollbar-thumb { background-color: black; }
+
+.inputBox {
+    background-color: #400000;
+    border-bottom: 1px dotted black;
+    border-right: 1px dotted black;
+	border-left: 1px dotted black;
+}
+
+.inputBoxField {
+    padding-bottom: 5px;
+	padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+	outline: none;
+    border: none;
+    height: 20px;
+    margin: 0;
+    color: inherit;
+    width: calc(100% - 40px)
+}
+.social {
+    background-color: #000047;
+    text-align: center;
+    height: 120px;
+    width: 100%;
+}
+
+.socialdivs {
+    background-color: #000025 !important;
+	margin-right: auto;
+    margin-left: auto;
+	height: 120px;
+    width: 1000px;
+}
+
+.social-fb:hover { background-color: #3b5998; cursor: pointer; }
+.social-yt:hover { background-color: #bb0000; cursor: pointer; }
+.social-tw:hover { background-color: #00aced; cursor: pointer; }
+.social-gplus:hover { background-color: #dd4b39; cursor: pointer; }
+
+.socialdivs a {
+	display: block;
+	height: inherit;
+	color: transparent;
+}
+
+.socialTile {
+	-webkit-transition: 0.1s; 
+	-moz-transition: 0.1s; 
+	-o-transition: 0.1s; 
+	transition: 0.1s; 
+    font-size: 56px;
+    height: inherit;
+    float: left;
+    width: 250px;
+}
+.socialTile i[class^="icon"] {
+	position: relative;
+	top: 20px;
+}
+
+.prefooter {
+    background-color: #000025;
+	-webkit-transition: 0.1s;
+	-moz-transition: 0.1s;
+	-o-transition: 0.1s;
+	transition: 0.1s;
+    height: 40px;
+    width: 100%;
+}
+
+.footer {
+    background-color: darkred;
+    font-family: 'Indie Flower', cursive;
+    text-shadow: 2px 2px black;
+    padding-top: 12px;
+    border-top: 1px dotted black;
+    text-align: center;
+	font-size: 16px;
+    height: 40px;
+    width: 100%;
+}
