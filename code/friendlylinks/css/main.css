@@ -1,0 +1,158 @@
+/* -- CSS by P4F -- */
+
+/* TAGS */
+body {
+	background-color: rgb(20, 24, 35);
+	font-family: "Josefin Sans", sans-serif;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* IDs */
+#container {
+	margin-right: auto;
+	margin-left: auto;
+	width: 1000px;
+}
+
+#header { margin: 20px 10px 10px 10px; }
+
+#tnlogo {
+	background-color: darkred;
+	border-right: 2px dotted #000011;
+	border-left: 2px dotted #000011;
+	text-align: center;
+	font-size: 36px;
+	padding: 10px;
+	color: white;
+	width: 536px;
+	float: left;
+}
+
+#clock1 {
+	background-color: maroon;
+	border-right: 2px dotted #000011;
+	border-left: 2px dotted #000011;
+	margin-left: 20px;
+	text-shadow: 1px 2px 2px black;
+	font-weight: 600;
+	text-align: center;
+	font-size: 36px;
+	padding: 10px;
+	width: 246px;
+	float: left;
+}
+
+#home {
+	background-color: #00bb00;
+	margin-left: 20px;
+	text-align: center;
+	font-size: 36px;
+	padding: 10px;
+	opacity: 0.8;
+	cursor: pointer;
+	width: 90px;
+	float: left;
+}	#home:hover { background-color: #00aa00; opacity: 1;}
+
+#leftBar, #rightBar { float: left; }
+
+#tile2 {
+	background-color: #00aaee;
+	border-right: 2px dotted #000011;
+	border-left: 2px dotted #000011;
+	padding: 10px;
+	height: 200px;
+	margin: 10px;
+	width: 536px;
+	float: left;	
+}
+
+#tile3 {
+	height: 220px;
+	margin: 10px;
+	width: 270px;
+	float: left;
+}
+#tile3fb {
+	background-color: #4668b3;
+	margin-right: 22px;
+	padding-top: 80px;
+	font-size: 36px;
+	height: 140px;
+}	#tile3fb:hover { background-color: #3557a2; cursor: pointer; }
+#tile3tw {
+	background-color: #3095d3;
+	margin-right: 23px;
+	padding-top: 80px;
+	font-size: 36px;
+	height: 140px;
+}	#tile3tw:hover { background-color: #2084c2; cursor: pointer; }
+#tile3gplus {
+	background-color: #d95333;
+	margin-right: 23px;
+	padding-top: 80px;
+	font-size: 36px;
+	height: 140px;
+}	#tile3gplus:hover { background-color: #c84222; cursor: pointer; }
+#tile3yt {
+	background-color: #e52d27;
+	padding-top: 80px;
+	font-size: 36px;
+	height: 140px;
+}	#tile3yt:hover { background-color: #b31217; cursor: pointer; }
+
+#tile4 {
+	background-color: #aa00ee;
+	border-right: 2px dotted #000011;
+	border-left: 2px dotted #000011;
+	padding: 40px 10px 10px 10px;
+	height: 170px;
+	margin: 10px 10px 20px 10px;
+	width: 86px;
+}
+
+#tile4-numofDay { font-size: 46px; text-align: center; }
+#tile4-nameofMonth { font-size: 20px; text-align: center; }
+
+#tile5 {
+	background-color: #cc8800;
+	border-right: 2px dotted #000011;
+	border-left: 2px dotted #000011;
+	padding: 80px 10px 10px 10px;
+	height: 130px;
+	margin: 10px;
+	width: 86px;
+}
+
+#tile5-nameofWeek {
+	text-align: center;
+	font-size: 18px;
+}
+
+#footer { 
+	background-color: #000011;
+	text-align: center; 
+	padding: 5px;
+	margin: 10px 10px 0px 10px;
+}
+
+/* Classes */
+.tile1 {
+	background-color: #00bb00;
+	text-align: center;
+	font-size: 80px;
+	padding: 10px;
+	height: 200px;
+	margin: 10px;
+	width: 250px;
+	float: left;	
+}	.tile1:hover { background-color: #00aa00; }
+
+.floated { float: left; }
+.text-shadow { text-shadow: 1px 1px 2px black; }
+.box_shadow { box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.8); }
