@@ -1,0 +1,54 @@
+/* Layout CSS by P4F */
+
+body {
+	background-color: black;
+	font-family: monospace;
+	font-size: 16px;
+	margin: 0 !important;
+	color: #00ff00;
+}
+
+#wrapper { width: 100%; }
+
+#header {
+	background-color: #440000;
+	padding: 20px 0;
+	width: 100%;
+}
+#logo {
+	letter-spacing: 10px;
+	margin-right: auto;
+	font-family: 'Dosis', sans-serif;
+	margin-left: auto;
+	text-align: center;
+	font-size: 30px;
+	width: 400px;
+	color: white;
+}
+
+.nav {
+	background-color: #cf4848;
+	border-bottom: 3px solid #440000;
+	border-top: 1px solid #440000;
+	text-align: center;
+	width: 100%;
+}
+
+#content {
+	margin-right: auto;
+	margin-left: auto;
+	line-height: 100%;
+	text-align: justify;
+	margin-top: 30px;
+	padding: 5px;
+	border: 2px solid white;
+	width: 1000px;
+}
+
+.sticky {
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	left: 0;
+	top: 0;	
+}

@@ -1,0 +1,51 @@
+/* MENU CSS by P4F */
+
+ul {
+	list-style-type: none;
+	line-height: 300%;
+	font-size: 14px;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	height: 35px;
+}
+
+ul a {
+	text-decoration: none;
+	display: block;
+	color: #ffffff;
+}
+
+ul > li {
+	border-right: 1px dotted black;
+	height: 40px;
+	float: left;
+	width: 202px;
+}
+
+ul > li:hover { background-color: maroon; }
+ul > li:hover a { color: orange; }
+ul > li:first-child { border-left: 1px dotted black; }
+
+ul > li > ol {
+	list-style-type: none;
+	display: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul > li:hover > ol { display: block; }
+
+ul > li > ol > li {
+	background-color: #cf4848;
+	border-bottom: 2px solid #751b1b;
+	position: relative;
+	z-index: 100;
+}
+
+ul > li > ol > li:last-child { border-bottom: 2px solid black; }
+
+ul > li > ol > li:hover a {
+	background-color: red;
+	color: white;
+}
