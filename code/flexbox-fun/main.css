@@ -1,0 +1,48 @@
+/* CSS by P4F */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 62.5%; /* 1.0rem = 10px */ }
+body { 
+    background: #202020;
+    font-size: 1.8rem;
+    color: white;
+}
+.flex-container {
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    background: #404040;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 800px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    display: -webkit-flex;
+    display: flex;
+    margin: auto;
+    border: 2px solid #FFFFFF;
+}
+.flex-box {  
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+    text-shadow: 2px 2px #000000;
+    background: #606060;
+    line-height: 80px;
+    min-width: 80px;
+    text-align: center;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border: 1px solid #EEEEEE;
+    flex: 1;
+}
+.flex-box:hover {
+    background: #303030;
+    line-height: 100px; 
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    width: 100px;
+}
