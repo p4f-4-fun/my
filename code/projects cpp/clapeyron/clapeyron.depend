@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1455473890 source:d:\aaaa\code\cpp\clapeyron\class_clapeyron.cpp
+	"class_clapeyron.h"
+
+1455474481 d:\aaaa\code\cpp\clapeyron\class_clapeyron.h
+
+1457603684 source:d:\aaaa\code\cpp\clapeyron\main.cpp
+	<iostream>
+	<windows.h>
+	"menu.h"
+	"class_clapeyron.h"
+	"units_converter.h"
+
+1457603631 d:\aaaa\code\cpp\clapeyron\menu.h
+
+1455403185 d:\aaaa\code\cpp\clapeyron\units_converter.h
+	<iostream>
+
+1455405279 source:d:\aaaa\code\cpp\clapeyron\menu.cpp
+	<iostream>
+	"menu.h"
+
+1455232876 source:d:\aaaa\code\cpp\clapeyron\units_converter.cpp
+	"units_converter.h"
+
+1455234754 d:\aaaa\code\cpp\clapeyron\singleton.h
+
+1455234629 source:d:\aaaa\code\cpp\clapeyron\singleton.cpp
+	"singleton.h"
+	"units_converter.h"
+
+1455475090 source:d:\aaaa\code\cpp\clapeyron\inputinterface.cpp
+	"inputinterface.h"
+
+1455475046 d:\aaaa\code\cpp\clapeyron\inputinterface.h
+

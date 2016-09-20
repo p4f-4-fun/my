@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1454882278 source:d:\aaaa\code\cpp\alg_euklides\main.cpp
+	<iostream>
+	"euklides.h"
+
+1454880867 d:\aaaa\code\cpp\alg_euklides\euklides.h
+
+1454882339 source:d:\aaaa\code\cpp\alg_euklides\euklides.cpp
+	"euklides.h"
+	<iostream>
+
