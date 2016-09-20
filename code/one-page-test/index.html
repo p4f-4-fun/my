@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pl" dir="ltr">
+	<head>
+		<title>-- One page HTML5 --</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- CSS -->
+		<link rel="stylesheet" href="main.css" type="text/css" />
+        <!-- fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	</head>
+<body>
+	<header class="page-header">
+        <div class="container">
+            <h3>MIASTO BIZNESU</h1>
+            <h5>
+                <q><span style="font-style: italic; color: #000000;">
+                    Nigdy nie ma popytu na rzecz nową
+                </span></q> - Henry Ford
+            </h5>
+        </div>
+    </header>
+    <nav class="page-navigation-menu">
+        <div class="container">
+            <ul>
+                <li><a href="#o_mnie">O mnie</a></li>
+                <li><a href="#oferta">Oferta</a></li>
+                <li><a href="#projekty">Projekty</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section class="section" id="o_mnie">
+            <div class="container">
+                <h4>O mnie</h4>
+                <article>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ullamcorper condimentum convallis. Sed sagittis dui et sem viverra lacinia. Ut lobortis mauris in commodo rhoncus. Donec dapibus auctor bibendum. Sed efficitur blandit dapibus. Quisque volutpat, ante ac eleifend gravida, nulla metus porttitor nisl, et laoreet est turpis ac sapien. Fusce pretium, sem nec gravida porta, odio libero dignissim erat, vitae varius sapien nisi at justo. Fusce vitae lacus a nibh molestie vulputate. Pellentesque ultrices ligula sapien, maximus ultricies odio tempor ut. Aenean tortor risus, rhoncus eget pharetra at, semper nec velit. Cras metus velit, sodales non ante luctus, accumsan cursus ipsum. Etiam bibendum, lorem eu eleifend rhoncus, felis est egestas libero, eu congue libero nibh id odio.
+                </article>
+            </div>
+        </section>
+        <section class="section" id="oferta">
+            <div class="container">
+                <h4>Oferta</h4>
+                <article>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ullamcorper condimentum convallis. Sed sagittis dui et sem viverra lacinia. Ut lobortis mauris in commodo rhoncus. Donec dapibus auctor bibendum. Sed efficitur blandit dapibus. Quisque volutpat, ante ac eleifend gravida, nulla metus porttitor nisl, et laoreet est turpis ac sapien. Fusce pretium, sem nec gravida porta, odio libero dignissim erat, vitae varius sapien nisi at justo. Fusce vitae lacus a nibh molestie vulputate. Pellentesque ultrices ligula sapien, maximus ultricies odio tempor ut. Aenean tortor risus, rhoncus eget pharetra at, semper nec velit. Cras metus velit, sodales non ante luctus, accumsan cursus ipsum. Etiam bibendum, lorem eu eleifend rhoncus, felis est egestas libero, eu congue libero nibh id odio.
+                </article>
+            </div>
+        </section>
+        <section class="section" id="projekty">
+            <div class="container">
+                <h4>Projekty</h4>
+                <article>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ullamcorper condimentum convallis. Sed sagittis dui et sem viverra lacinia. Ut lobortis mauris in commodo rhoncus. Donec dapibus auctor bibendum. Sed efficitur blandit dapibus. Quisque volutpat, ante ac eleifend gravida, nulla metus porttitor nisl, et laoreet est turpis ac sapien. Fusce pretium, sem nec gravida porta, odio libero dignissim erat, vitae varius sapien nisi at justo. Fusce vitae lacus a nibh molestie vulputate. Pellentesque ultrices ligula sapien, maximus ultricies odio tempor ut. Aenean tortor risus, rhoncus eget pharetra at, semper nec velit. Cras metus velit, sodales non ante luctus, accumsan cursus ipsum. Etiam bibendum, lorem eu eleifend rhoncus, felis est egestas libero, eu congue libero nibh id odio.
+                </article>
+            </div>
+        </section>
+        <section class="section" id="kontakt">
+            <div class="container">
+                <h4>Kontakt</h4>
+                <article>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ullamcorper condimentum convallis. Sed sagittis dui et sem viverra lacinia. Ut lobortis mauris in commodo rhoncus. Donec dapibus auctor bibendum. Sed efficitur blandit dapibus. Quisque volutpat, ante ac eleifend gravida, nulla metus porttitor nisl, et laoreet est turpis ac sapien. Fusce pretium, sem nec gravida porta, odio libero dignissim erat, vitae varius sapien nisi at justo. Fusce vitae lacus a nibh molestie vulputate. Pellentesque ultrices ligula sapien, maximus ultricies odio tempor ut. Aenean tortor risus, rhoncus eget pharetra at, semper nec velit. Cras metus velit, sodales non ante luctus, accumsan cursus ipsum. Etiam bibendum, lorem eu eleifend rhoncus, felis est egestas libero, eu congue libero nibh id odio.
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <h6>&copy; P4Fun 2016 - HTML5 one page website</h6>
+        </div>
+    </footer>
+    <!-- JS SCRIPTS -->
+    <script src="pub/js/jquery.js"></script>
+    <script src="pub/js/stickyfill.js"></script>
+    <script>
+    <!--
+        // Sticky Navigation Bar
+        $('.page-navigation-menu').Stickyfill();
+        
+        // Smoothing scroll function
+        $( function () {
+            $('a[href*="#"]:not([href="#"])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').stop().animate({
+                            scrollTop: target.offset().top - 70
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    //-->
+    </script>
+</body>
+</html>
