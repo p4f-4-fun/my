@@ -1,0 +1,239 @@
+/* CSS via notepad 2016-04-23 */
+
+/* RESET CSS HTML5 */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	vertical-align: baseline;
+	background: transparent;
+	font-size: 100%;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	border: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none; 
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* ---------- ANIMATION KEYFRAMES SECTION ---------- */
+/* ---------- divFlowBg ---------- */
+@keyframes divFlowBg {
+	0% { 
+		background: #00A; 
+		-webkit-transform: rotate(0deg) scale(1); 
+		-moz-transform: rotate(0deg) scale(1); 
+		-ms-transform: rotate(0deg) scale(1); 
+		-o-transform: rotate(0deg) scale(1); 
+		transform: rotate(0deg) scale(1);
+		border-radius: 0%;
+	}
+	50% { 
+		background: #0A0; 
+		-webkit-transform: rotate(270deg) scale(0.7); 
+		-moz-transform: rotate(270deg) scale(0.7); 
+		-ms-transform: rotate(270deg) scale(0.7); 
+		-o-transform: rotate(270deg) scale(0.7); 
+		transform: rotate(270deg) scale(0.7);
+		border-radius: 25%;
+	}
+	90% { 
+		background: #A00;  
+		-webkit-transform: rotate(360deg) scale(0.5); 
+		-moz-transform: rotate(360deg) scale(0.5); 
+		-ms-transform: rotate(360deg) scale(0.5); 
+		-o-transform: rotate(360deg) scale(0.5); 
+		transform: rotate(360deg) scale(0.5);
+		border-radius: 50%;
+	}
+	100% { 
+		background: #00A;
+		-webkit-transform: rotate(0deg) scale(1); 
+		-moz-transform: rotate(0deg) scale(1); 
+		-ms-transform: rotate(0deg) scale(1); 
+		-o-transform: rotate(0deg) scale(1); 
+		transform: rotate(0deg) scale(1);
+		border-radius: 0%;
+	}
+}
+@-webkit-keyframes divFlowBg {
+	0% { 
+		background: #00A; 
+		-webkit-transform: rotate(0deg) scale(1);
+		border-radius: 0%;
+	}
+	50% { 
+		background: #0A0; 
+		-webkit-transform: rotate(270deg) scale(0.7);
+		border-radius: 25%;
+	}
+	90% { 
+		background: #A00;  
+		-webkit-transform: rotate(360deg) scale(0.5);
+		border-radius: 50%;
+	}
+	100% { 
+		background: #00A;
+		-webkit-transform: rotate(0deg) scale(1);
+		border-radius: 0%;
+	}
+}
+/* ---------- /divFlowBg ---------- */
+
+/* ---------- bodyFlowBg ---------- */
+@keyframes bodyFlowBg {
+	0% { background: #A00; }
+	25% { background: #0A0; }
+	50% { background: #00A; }
+	75% { background: #AA0; }
+	100% { background: #A00; }
+}
+@-webkit-keyframes bodyFlowBg {
+	0% { background: #A00; }
+	25% { background: #0A0; }
+	50% { background: #00A; }
+	75% { background: #AA0; }
+	100% { background: #A00; }
+}
+/* ---------- /bodyFlowBg ---------- */
+/* ---------- END OF ANIMATION KEYFRAMES SECTION ---------- */
+
+
+/* Main part of CSS */
+/* ------------------ */
+body {
+	/* Initial animation */
+	-webkit-animation: bodyFlowBg 20s infinite ease-in-out;
+	-moz-animation: RbodyFlowBg 20s infinite ease-in-out;
+	-ms-animation: bodyFlowBg 20s infinite ease-in-out;
+	-o-animation: bodyFlowBg 20s infinite ease-in-out;
+	animation: bodyFlowBg 20s infinite ease-in-out;
+}
+
+.bodyClickClass {
+	border: 100px solid black;
+}
+
+div.page-something {
+	/* Initial animation */
+	-webkit-animation: divFlowBg 10s infinite linear;
+	-moz-animation: divFlowBg 10s infinite linear;
+	-ms-animation: divFlowBg 10s infinite linear;
+	-o-animation: divFlowBg 10s infinite linear;
+	animation: divFlowBg 10s infinite linear;
+	
+	/* SIZE */
+	height: 200px;
+	width: 200px;
+	
+	/* POSITION */
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	top: 100px;
+	
+	/* ADs */
+	cursor: pointer;
+}
+
+div.line {
+	/* BG */
+	background: #FFF;
+	
+	/* SIZE */
+	height: 4px;
+	width: 180px;
+
+	/* POSITION */
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	top: 96px;
+	
+	/* FX */
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+div.lines {
+	/* SIZE */
+	width: 200px;
+	height: 200px;
+}
+
+div.lines .line.up {
+	/* FX */
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	
+	/* DISPLAY */
+	display: none;
+}
+
+div.lines:hover .line.up {
+	/* DISPLAY */
+	display: block;
+	
+	/* POSITION */
+	top: 80px;
+}
+
+div.lines:active .line {
+	/* FX */
+	-webkit-transition: all 100ms ease-in-out;
+	-moz-transition: all 100ms ease-in-out;
+	-ms-transition: all 100ms ease-in-out;
+	-o-transition: all 100ms ease-in-out;
+	transition: all 100ms ease-in-out;
+	
+	/* BG */
+	background: #A00;
+}
+
+div.lines:hover .line {
+	/* FX */
+	-webkit-transform: rotate(180deg); 
+	-moz-transform: rotate(180deg); 
+	-ms-transform: rotate(180deg); 
+	-o-transform: rotate(180deg); 
+	transform: rotate(180deg);
+	
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+div.lines:hover :last-child {
+	/* POSITION */
+	top: 112px;
+}
+
+.page-something .lines :last-child  {
+	/* FX */
+	-webkit-transform: rotate(90deg); 
+	-moz-transform: rotate(90deg); 
+	-ms-transform: rotate(90deg); 
+	-o-transform: rotate(90deg); 
+	transform: rotate(90deg);
+	
+	/* POSITION */
+	top: 95px;
+}

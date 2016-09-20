@@ -1,0 +1,113 @@
+/* CSS via notepad 2016-04-23 */
+
+/* RESET CSS HTML5 */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	vertical-align: baseline;
+	background: transparent;
+	font-size: 100%;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	border: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none; 
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Main part of CSS */
+/* ------------------ */
+body {
+	/* BG */
+	background: #066;
+}
+
+.bodyClickClass {
+	border: 100px solid black;
+}
+
+div.page-something {
+	/* BG */
+	background: #300;
+	
+	/* SIZE */
+	height: 200px;
+	width: 200px;
+	
+	/* POSITION */
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	top: 100px;
+	
+	/* ADs */
+	cursor: pointer;
+}
+	div.lines {
+		/* SIZE */
+		width: 200px;
+		height: 200px;
+	}
+		div.line {
+			/* BG */
+			background: #FFF;
+			
+			/* SIZE */
+			height: 4px;
+			width: 180px;
+
+			/* POSITION */
+			margin-right: auto;
+			margin-left: auto;
+			position: relative;
+			top: 96px;
+		}
+		
+	div.lines .line.up {
+		/* SIZE */
+		display: block;
+		height: 180px;
+		width: 4px;
+		top: 12px;
+	}
+	
+	div.lines:hover .line.up {
+		/* SIZE */
+		height: 4px;
+		width: 180px;
+		top: 74px;
+	}
+	
+	div.lines > .line + .line {
+		position: relative;
+		top: -84px;
+	}
+	div.lines:hover > .line + .line {
+		position: relative;
+		top: 92px;
+	}
+	
+	div.lines > .line + .line + .line {
+		position: relative;
+		top: -88px;
+	}
+	div.lines:hover > .line + .line + .line {
+		position: relative;
+		top: 110px;
+	}
+
+	div.lines:active .line {
+		/* BG */
+		background: #A00;
+	}
