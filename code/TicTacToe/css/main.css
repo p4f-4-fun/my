@@ -1,0 +1,120 @@
+/* Tic Tac Toe by P4F *
+**  v1 - 18.04.2015r  *
+**  v2 - 28.11.2015r  *
+** ------ CSS ------- */
+
+/* TAGs */
+body {
+	background-attachment: fixed;
+	background-position: center top;
+	background-image: url('../graphics/bg.jpg');
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 400;
+}
+/* ---------------- */
+
+
+/* ID's */
+#container {
+	margin-right: auto;
+	margin-left: auto;
+	width: 1000px;
+}
+
+#header {
+	background-color: #990000;
+	height: 103px;
+}
+#header_inner {
+	text-align: center;
+	padding: 10px; 
+}
+#head_board {
+	opacity: 0.7;
+	cursor: pointer;	
+}
+#head_board:hover {
+	opacity: 1;
+	width: 3.5%;
+}
+
+#content {
+	padding: 40px;
+	height: 360px;
+}
+#gameInfos {
+	background-color: #009900;
+	padding: 10px;
+	height: 340px;
+	float: left;
+	width: 220px;
+}
+#movement {
+	text-shadow: 1px 2px 2px black;
+	text-align: center;
+	color: white;
+}
+#gamePlace {
+	background-color: #660000;
+	margin-left: 40px;
+	height: 361px;
+	float: left;
+	width: 636px;
+}
+#spots { padding: 50px 185px; }
+
+#footer { 
+	background-color: #990000;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	padding-top: 2px;
+	text-shadow: 1px 2px 2px black;
+	height: 18px;
+	color: white;
+}
+#cpright_text {
+	font-weight: 600;
+	font-size: 14px;
+	opacity: 0.5;
+}
+#cpright_text:hover, .box_img:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+#end {
+	text-align: center;
+	font-size: 24px;
+	padding: 100px;
+	color: white;
+}
+#endButton {
+	background-color: #00dd00;
+	border-radius: 4px;
+	font-family: Arial;
+	font-size: 18px;
+	border: 0;
+	color: black;
+}
+#endButton:hover {
+	background-color: #00ff00;
+	font-size: 20px;
+	cursor: pointer;
+	border: 0;
+}
+/* ---------------- */
+
+
+/* Classes */
+.box_specs {
+	border-radius: 6px; 
+	box-shadow: 0px 1px 10px 2px rgba(0, 0, 0, 0.7);
+}
+.box_outter_space { height: 20px; }
+.clearfix { clear: both; }
+.box_img {
+	opacity: 0.95;
+	margin: 0;
+	padding: 2px;
+	cursor: pointer;
+}
