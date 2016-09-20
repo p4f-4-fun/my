@@ -1,0 +1,50 @@
+1. Ilość wypadnięć danej liczby:
+	* w ciągu 13 losowań.
+	* miesiąca.
+	* roku.
+	* 5 lat 
+	* 10 lat
+	-- done!
+2. Ile losowań temu padła dana liczba od dnia obecnego. - done!
+3. Ilość wypadnięć danej pary liczb
+	* w ciągu 13 losowań
+	* miesiąca
+	* roku
+	* lat
+	* 10 lat
+4. Sprawdzanie ostatnich wyników wygranej.
+
+
+lech {
+	silowniki = nie_na_miejscu;
+	tuleje przednia = 8-11zł;
+	tuleja tylnia = 15-20zł;
+	sworzen = 27-45zł;
+}
+
+kaczmar {
+	silowniki = 2x 40zł od reki
+	tuleja przednia = 10-13zł od reki
+	tuleja tylnia = 38zł od reki
+	sworzen = 20-46zł od reki
+}
+
+kasztelanska {
+	silowniki = nie_ma;
+	tuleja przednia = 
+	tuleja tylnia = 
+	sworzen = 
+}
+
+instalacja_ca { 
+	
+	przed {
+		KABEL = 11,7m;
+	}
+	
+	po {
+		KABEL = X,Xm;
+	}
+
+}
+
