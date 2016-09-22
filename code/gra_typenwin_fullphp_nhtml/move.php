@@ -4,13 +4,19 @@
 	//unset($_SESSION['array4Game']);
 	//unset($_SESSION['start']);
 	
+	
+	// SETTING UP SESSION MAIN VALUES;
 	if ( !isset( $_SESSION['array4Game'] ) || empty( $_SESSION['array4Game'] ) )
 		$_SESSION['array4Game'] = array();
 	
 	if ( !isset( $_SESSION['start'] ) || empty( $_SESSION['start'] ) )
 		$_SESSION['start'] = 0;
 	
+	if ( !isset( $_SESSION['quantity'] ) || empty( $_SESSION['quantity'] ) )
+		$_SESSION['quantity'] = rand(3, 15);
 	
+	if ( !isset( $_SESSION['mutationParam'] ) || empty( $_SESSION['mutationParam'] ) )
+		$_SESSION['mutationParam'] = rand(9, 35);
 	
 ?>
 <!doctype html>
@@ -19,19 +25,26 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Comaptible" content="IE=edge, chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 	<title>Type n win - wipe da wall!</title>
 	<style>
 		* { margin: 0; padding: 0; }
 		span { margin: 0; padding: 0; }
 		html { font-size: 62.5%; }
-		body { background-color: #000; color: #0F0; font-size: 1.8rem; }
+		body { 
+			background-color: #090909; 
+			color: #0F0; 
+			font-size: 1.8rem; 
+			font-family: 'Open Sans', sans-serif;
+		}
 		.gameboard {
 			display: flex;
 			display: -webkit-flex;
 			justify-content: center;
 			margin-top: 50px;
 			width: 100%;
-			letter-spacing: 1.2rem;
+			letter-spacing: 1.0rem;
+			text-shadow: 0px 0px 12px #000;
 		}
 		input, button {
 			background-color: #323232;
@@ -70,7 +83,7 @@ Hav' Fun!<br />
 	
 	$size_A = 25;
 	$sizeOfarray = pow($size_A, 2);
-	$quantityOfFeed = sqrt($size_A);
+	$quantityOfFeed = $_SESSION['quantity'];
 	
 	if ($_SESSION['start'] == 0) {
 		$CTypenWin->fillAll($sizeOfarray, $quantityOfFeed);
@@ -112,8 +125,7 @@ Be understanding for me!.
 	<?php
 		if ( isset($_GET["a"]) && !empty($_GET["a"]) ) {
 			if ( $_GET["a"] == "r" ) {
-				unset($_SESSION['array4Game']);
-				unset($_SESSION['start']);
+				$CTypenWin->resetGame();
 				unset($_GET['a']);
 				header("Location: move.php");
 			}	

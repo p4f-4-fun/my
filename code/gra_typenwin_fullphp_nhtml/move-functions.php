@@ -16,7 +16,7 @@ class CTypenWin {
 	}
 		
 	private function fill4Feed($hmanyFeed) {
-		$m = 21;
+		$m = $_SESSION['mutationParam'];
 		
 		for ($f4d = 1; $f4d <= $hmanyFeed; $f4d++) {
 			if ($_SESSION['array4Game'][$f4d * $m] == SIGN_U)
@@ -40,14 +40,38 @@ class CTypenWin {
 		return true;
 	}
 	
+	public function resetGame() {
+		unset($_SESSION['array4Game']);
+		unset($_SESSION['start']);
+		unset($_SESSION['mutationParam']);
+		unset($_SESSION['quantity']);
+	}
+	
 	public function fillAll($chartSize, $hmanyFeed) {
 		$this::fillBoard($chartSize);
 		$this::fill4Feed($hmanyFeed);
 	}
 	
+	/* <==== kopia
 	public function renderAll($chartSize) {
-		for ($rb = 0; $rb < $chartSize; $rb++)
-			echo (($rb+1) % 25 == 0) ? ($_SESSION['array4Game'][$rb] . "<br />") : $_SESSION['array4Game'][$rb];
+		for ($i = 1; $i <= 5; $i++) {
+			for ($rb = 0; $rb < $chartSize; $rb++)
+				echo (($rb+1) % 25 == 0) ? ($_SESSION['array4Game'][$rb] . $rb  . "<br />") : $_SESSION['array4Game'][$rb];
+		}
+	}*/
+		
+	public function renderAll($chartSize) {
+		$i = 0;
+		
+		for ($rb = 0; $rb < $chartSize; $rb++) {
+			if ( ($rb+1) % 25 == 0 )
+				if ( ++$i % 5 == 0 ) 
+					echo $_SESSION['array4Game'][$rb]. '<span style="color: #EEE;">'. $i .'</span><br />';
+				else 
+					echo $_SESSION['array4Game'][$rb]. $i ."<br />";
+			else 
+				echo $_SESSION['array4Game'][$rb];
+		}
 	}
 	
 	public function validateX($x_user, $sizeA, $chartSize) {
@@ -89,8 +113,7 @@ class CTypenWin {
 				echo "KONIEC GRY! <br />";
 				echo "Kliknij przycisk RESET,<br />by grać ponownie!<br /><br />";
 				echo '<button type="button" onclick="document.location=\'move.php\';">===> R E S E T <===</button><br /><br />';
-				unset($_SESSION['array4Game']);
-				unset($_SESSION['start']);
+				$this::resetGame();
 			}
 			
 			// Render 2 c fx
