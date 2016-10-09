@@ -15,7 +15,7 @@
 		} else {
 			$a = file_get_contents("login.php");
 		}
-			echo "<span style='color: red;'>Unknown user! Try to sign in again!</span>" . $a;
+			echo "<span style='color: red; text-shadow: 1px 1px 1px #000; text-align: center;'>---> Unknown user! Try to sign in again!</span>" . $a;
 	}
 	else if ( isset($_GET['a']) && $_GET['a'] === "logout" ) {
 		unset($_SESSION['nickname']);

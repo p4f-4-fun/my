@@ -54,7 +54,7 @@
 			color: #FFF;
 		}
 		div.lightbox_login_frame_board {
-			background-color: rgba(0, 0, 0, .6);
+			background-color: rgba(0, 0, 0, .3);
 			min-height: 100%;
 			min-width: 100%;
 			position: fixed;
@@ -63,17 +63,21 @@
 			top: 0;
 		}
 		div.position_iframe {
+			-webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, .6);
+			-moz-box-shadow: 0px 2px 10px rgba(0, 0, 0, .6);
+			box-shadow: 0px 2px 10px rgba(0, 0, 0, .6);
 			border-radius: 3rem;
 			margin: 0 auto;
 			margin-top: 5%;
 			height: 30vh;
-			width: 50vw;
+			width: 30vw;
 		}
 		div.position_iframe iframe {
 			border: 0;
 			outline: 0;
 			width: inherit;
 			height: inherit;
+			border-radius: 3rem;
 		}
 	-->
 	</style>

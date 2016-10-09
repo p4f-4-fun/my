@@ -21,15 +21,21 @@
 			font-family: monospace;
 			font-size: 2rem;
 			color: #EEE;
+			min-width: 100vw;
+			min-height: 100vh;
+		}
+		.mainlyB {
+			text-align: center;
+			padding-top: 30vh;
 		}
 	-->
 	</style>
 </head>
 <body>
-	<div style="min-width: 100vw; min-height: 100vh;">
+	<div class="mainlyB">
 		<form action="validUser.php" method="post">
-			Login: <input type="text" name="lg" /><br />
-			Psswd: <input type="password" name="pw" /><br />
+			Login: <input type="text" name="lg" required /><br />
+			Psswd: <input type="password" name="pw" required /><br />
 			<input type="submit" value="Sign In" />
 		</form>
 	</div>
